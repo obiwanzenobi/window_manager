@@ -295,6 +295,12 @@ std::optional<LRESULT> WindowManagerPlugin::HandleWindowProc(HWND hWnd,
     } else if (wParam == PBT_APMRESUMEAUTOMATIC) {
         _EmitEvent("woke-up");
     }
+  } else if (message == WM_SHOWWINDOW) {
+    if (wParam == TRUE) {
+      _EmitEvent("show");
+    } else {
+      _EmitEvent("hide");
+    }
   }
   return result;
 }
