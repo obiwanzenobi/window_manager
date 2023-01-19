@@ -527,7 +527,7 @@ class WindowManager {
 
   /// Sets progress value in progress bar. Valid range is [0, 1.0].
   ///
-  /// @platforms macos
+  /// @platforms macos,windows
   Future<void> setProgressBar(double progress) async {
     final Map<String, dynamic> arguments = {
       'progress': progress,
