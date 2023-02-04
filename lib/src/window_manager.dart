@@ -73,7 +73,7 @@ class WindowManager {
         kWindowEventSleep: listener.onSleep,
         kWindowEventWokeUp: listener.onWokeUp,
       };
-      funcMap[eventName]!();
+      funcMap[eventName]?.call();
     }
   }
 
