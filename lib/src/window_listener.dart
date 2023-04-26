@@ -2,6 +2,9 @@ abstract class WindowListener {
   /// Emitted when the window is going to be closed.
   void onWindowClose() {}
 
+  /// Emitted when the window.show is called.
+  void onWindowShow() {}
+
   /// Emitted when the window gains focus.
   void onWindowFocus() {}
 

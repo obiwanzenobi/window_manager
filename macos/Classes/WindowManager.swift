@@ -108,6 +108,7 @@ public class WindowManager: NSObject, NSWindowDelegate {
             self.mainWindow.makeKeyAndOrderFront(nil)
             NSApp.activate(ignoringOtherApps: true)
         }
+        _emitEvent("show")
     }
     
     public func hide() {

@@ -339,6 +339,7 @@ void WindowManagerPlugin::HandleMethodCall(
     result->Success(flutter::EncodableValue(value));
   } else if (method_name.compare("show") == 0) {
     window_manager->Show();
+    _EmitEvent("show");
     result->Success(flutter::EncodableValue(true));
   } else if (method_name.compare("hide") == 0) {
     window_manager->Hide();

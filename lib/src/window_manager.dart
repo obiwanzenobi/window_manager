@@ -14,6 +14,7 @@ import 'window_listener.dart';
 import 'window_options.dart';
 
 const kWindowEventClose = 'close';
+const kWindowEventShow = 'show';
 const kWindowEventFocus = 'focus';
 const kWindowEventBlur = 'blur';
 const kWindowEventMaximize = 'maximize';
@@ -56,6 +57,7 @@ class WindowManager {
       listener.onWindowEvent(eventName);
       Map<String, Function> funcMap = {
         kWindowEventClose: listener.onWindowClose,
+        kWindowEventShow: listener.onWindowShow,
         kWindowEventFocus: listener.onWindowFocus,
         kWindowEventBlur: listener.onWindowBlur,
         kWindowEventMaximize: listener.onWindowMaximize,
