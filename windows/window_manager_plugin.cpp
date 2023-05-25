@@ -321,7 +321,7 @@ std::optional<LRESULT> WindowManagerPlugin::HandleWindowProc(HWND hWnd,
 	    window_manager->SetAlwaysOnBottom(args);
 	  }
   }
-  
+
   return result;
 }
 
