@@ -310,6 +310,7 @@ std::optional<LRESULT> WindowManagerPlugin::HandleWindowProc(HWND hWnd,
   } else if (message == WM_SHOWWINDOW) {
     if (wParam == TRUE) {
       _EmitEvent("show");
+      window_manager->ForceRefresh();
     } else {
       _EmitEvent("hide");
     }
